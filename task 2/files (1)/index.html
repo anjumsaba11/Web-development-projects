@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy - Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar">
+    <div class="logo">ShopEasy</div>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="cart-link"><a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        <!-- login/register or logout links get added here by auth.js -->
+        <span id="navAuthLinks"></span>
+    </ul>
+</nav>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero">
+    <h1>Welcome to ShopEasy</h1>
+    <p>Simple online shopping for everyday things.</p>
+    <a href="products.html"><button class="hero-btn">Shop Now</button></a>
+</section>
+
+<!-- ===== Featured Products ===== -->
+<h2 class="section-title">Featured Products</h2>
+<div class="product-grid" id="featuredProducts">
+    <!-- product cards get inserted here by script.js -->
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+    <p>&copy; 2026 ShopEasy Mini Project. All rights reserved.</p>
+    <p>Made by Saba | College Mini Project</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/auth.js"></script>
+<script>
+    // load featured products when the page opens
+    loadFeaturedProducts();
+</script>
+</body>
+</html>

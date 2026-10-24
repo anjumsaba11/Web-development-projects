@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ledger">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger : a to-do list</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">☐</span>
+        <h1>Ledger</h1>
+      </div>
+
+      <nav class="theme-switch" role="tablist" aria-label="Choose theme">
+        <button class="theme-btn" data-theme-btn="ledger" role="tab" aria-selected="true" title="Ledger">
+          <span class="swatch swatch-ledger"></span> Ledger
+        </button>
+        <button class="theme-btn" data-theme-btn="nocturne" role="tab" aria-selected="false" title="Nocturne">
+          <span class="swatch swatch-nocturne"></span> Nocturne
+        </button>
+        <button class="theme-btn" data-theme-btn="terminal" role="tab" aria-selected="false" title="Terminal">
+          <span class="swatch swatch-terminal"></span> Terminal
+        </button>
+        <button class="theme-btn" data-theme-btn="bloom" role="tab" aria-selected="false" title="Bloom">
+          <span class="swatch swatch-bloom"></span> Bloom
+        </button>
+      </nav>
+    </header>
+
+    <main class="board">
+
+      <form class="entry-row" id="entry-form">
+        <span class="entry-index" id="next-index">01</span>
+        <input
+          type="text"
+          id="task-input"
+          class="entry-input"
+          placeholder="Enter a line item…"
+          autocomplete="off"
+          maxlength="140"
+        >
+        <select id="priority-select" class="priority-select" aria-label="Priority">
+          <option value="low">Low</option>
+          <option value="normal" selected>Normal</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit" class="add-btn">Add</button>
+      </form>
+
+      <div class="filter-row">
+        <div class="filters" role="tablist" aria-label="Filter tasks">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="open">Open</button>
+          <button class="filter-btn" data-filter="done">Done</button>
+        </div>
+        <button class="clear-btn" id="clear-done">Clear done</button>
+      </div>
+
+      <ul class="ledger-list" id="ledger-list">
+        <!-- tasks injected here -->
+      </ul>
+
+      <p class="empty-state" id="empty-state">
+        No entries yet. The first line is always the hardest — type one above.
+      </p>
+
+      <footer class="tally">
+        <span id="tally-text">0 entries · 0 closed</span>
+        <div class="tally-bar" aria-hidden="true">
+          <div class="tally-fill" id="tally-fill"></div>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

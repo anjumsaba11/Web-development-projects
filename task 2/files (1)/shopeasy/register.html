@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy - Register</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ShopEasy</div>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="cart-link"><a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        <span id="navAuthLinks"></span>
+    </ul>
+</nav>
+
+<div class="form-container">
+    <h2>Create an Account</h2>
+    <form id="registerForm" onsubmit="handleRegister(event)">
+        <div class="form-group">
+            <label for="regName">Full Name</label>
+            <input type="text" id="regName" required>
+        </div>
+        <div class="form-group">
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <p class="form-msg" id="registerMsg"></p>
+    </form>
+    <p class="form-footer-text">Already have an account? <a href="login.html">Login here</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2026 ShopEasy Mini Project. All rights reserved.</p>
+    <p>Made by Saba | College Mini Project</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

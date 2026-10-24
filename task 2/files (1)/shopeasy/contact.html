@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy - Contact</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ShopEasy</div>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="cart-link"><a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        <span id="navAuthLinks"></span>
+    </ul>
+</nav>
+
+<div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have a question or feedback? Fill out the form below and we'll get back to you.</p>
+</div>
+
+<div class="form-container">
+    <form id="contactForm" onsubmit="handleContactForm(event)">
+        <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" required>
+        </div>
+        <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+        <p class="form-msg" id="contactMsg"></p>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2026 ShopEasy Mini Project. All rights reserved.</p>
+    <p>Made by Saba | College Mini Project</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

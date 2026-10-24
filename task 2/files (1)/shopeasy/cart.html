@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy - Cart</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ShopEasy</div>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="cart-link"><a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        <span id="navAuthLinks"></span>
+    </ul>
+</nav>
+
+<h2 class="section-title">My Cart</h2>
+
+<p class="empty-cart-msg" id="emptyCartMsg">Your cart is empty. <a href="products.html">Go shopping</a></p>
+
+<table class="cart-table" id="cartTable">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="cartTableBody">
+        <!-- cart rows inserted here by cart.js -->
+    </tbody>
+</table>
+
+<div class="cart-summary" id="cartSummary">
+    <h3>Total: Rs. <span id="cartTotalAmount">0</span></h3>
+    <a href="checkout.html"><button class="btn btn-yellow">Proceed to Checkout</button></a>
+</div>
+
+<footer>
+    <p>&copy; 2026 ShopEasy Mini Project. All rights reserved.</p>
+    <p>Made by Saba | College Mini Project</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/auth.js"></script>
+<script>
+    renderCartPage();
+</script>
+</body>
+</html>

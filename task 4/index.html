@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect Four</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="table">
+
+    <header class="scoreboard">
+      <div class="player-card" id="card-red">
+        <span class="chip chip--red"></span>
+        <div class="player-info">
+          <span class="player-name">Red</span>
+          <span class="player-score" id="score-red">0</span>
+        </div>
+      </div>
+
+      <div class="turn-banner">
+        <span class="turn-label">On deck</span>
+        <span class="turn-value" id="turn-indicator">Red</span>
+      </div>
+
+      <div class="player-card" id="card-yellow">
+        <span class="chip chip--yellow"></span>
+        <div class="player-info">
+          <span class="player-name">Yellow</span>
+          <span class="player-score" id="score-yellow">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="cabinet">
+      <div class="hopper" id="hopper">
+        <!-- drop preview chips injected by JS -->
+      </div>
+      <div class="frame">
+        <div class="board" id="board">
+          <!-- slots + cells injected by JS -->
+        </div>
+      </div>
+      <div class="chute-shadow"></div>
+    </div>
+
+    <div class="status-row">
+      <p class="status-message" id="status-message">Drop a chip to begin.</p>
+      <button class="reset-btn" id="reset-btn" type="button">New round</button>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
